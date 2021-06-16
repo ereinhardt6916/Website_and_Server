@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="pragma" content="no-cache" />
+        <title>Forms: Request Access</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../login/request_access.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="page" class="container">
+            <header id="header" class="grid_12">
+            </header>
+            <article id="feature" class="grid_12">
+                <form action="../signup/addcredentials.php" method="post" id="access" >
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="font-weight: bold;">Sign Up</div>
+                        <div id="contact" class="panel-body">                
+                            <div class="d">
+                                <label for="username" class="txt_label">Username:</label>
+                                <input id="username" class="txt_input" type="text" name="username" />
+                                <a id="usernameFeedback"></a>
+                            </div>
+                            <div class="d">
+                                <label for="password" class="txt_label">Password:</label>
+                                <input id="password" class="txt_input" type="password" name="password" />
+                                <a id="passwordFeedback"></a>
+                            </div> 
+                            <div id="subdiv" class="d">
+                                <input id="submit" type="submit" value="Submit Request" />
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+
+                </form>
+                <script src="../signup/formEvent.js"></script>
+            </article>
+        </div>
+    </body>
+</html>

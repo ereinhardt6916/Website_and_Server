@@ -1,0 +1,77 @@
+#cd{
+    border: 2px solid blue;
+    background-color: blue;
+    border-radius: 20px;
+    width:auto; /* Or auto */
+    padding:0 10px; /* To give a bit of padding on the left and right */
+    border-bottom:none;
+}
+
+.txt_input{
+    width: 200px;
+    text-align: left;
+    padding: 0px 0px 0 px 10px;
+
+}
+
+#subdiv{
+    width: 400px;
+    margin-bottom: 50px;
+}
+
+@media (min-width:768px) {	/* Styling applied only if device width is GREATER than 768px */
+	.txt_input { width: 300px; }
+    #subdiv {width: 500px}
+}
+
+/* Medium devices (desktops 992px and up) */
+@media (min-width: 992px) { /* Styling applied only if device width is GREATER than 992px */
+	.txt_input { width: 500px; }
+    #subdiv {width: 700px}
+
+}
+
+/* Large devices (desktops 1200px and up) */
+@media (min-width: 1200px) { /* Styling applied only if device width is greater than 1200px */
+	.txt_input { width: 700px; }
+    #subdiv {width: 900px}
+
+}
+
+.txt_label{
+width: 100px;
+float: left;
+text-align: right;
+padding: 0px 5px 0px 0px;
+font-family:  sans-serif;
+color: white;
+}
+
+#contact{
+    background-image: url(../images/background.jpg);
+
+}
+
+.d{
+    padding: 10px 0px 10px 0px;
+    width: 1200px;
+}
+
+#submit{
+background-color: blue;
+color: white;
+float:right;
+}
+
+#submit:hover{
+    background-color: magenta;
+}
+#submit:active{
+    background-color: black;
+}
+
+body{
+    background-color: rgb(37, 77, 151);
+    margin-top: 55px;
+}
+

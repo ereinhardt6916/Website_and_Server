@@ -1,0 +1,256 @@
+.board {
+    width: 50vw;
+    height: 50vw;
+    margin: 20px;
+    border: 25px solid #333;
+}
+.empty {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/empty.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+.white {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/white.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+.black {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/black.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+.b_empty {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/b_empty.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+.b_black {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/b_black.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+.b_white {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/b_white.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+
+.t_empty {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/t_empty.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+.t_black {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/t_black.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+.t_white {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/t_white.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+
+.l_empty {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/l_empty.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+.l_black {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/l_black.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+.l_white {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/l_white.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+
+.r_empty {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/r_empty.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+.r_black {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/r_black.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+.r_white {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/r_white.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+
+.br_empty {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/br_empty.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+.br_black {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/br_black.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+.br_white {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/br_white.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+
+.tr_empty {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/tr_empty.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+.tr_black {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/tr_black.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+.tr_white {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/tr_white.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+
+.tl_empty {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/tl_empty.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+.tl_black {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/tl_black.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+.tl_white {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/tl_white.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+
+.bl_empty {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/bl_empty.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+.bl_black {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/bl_black.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}
+.bl_white {
+    float: left;
+    width: 11.11%;
+    height: 11.11%;
+    background-size: 100% 100%;
+    background-image: url(../GameBoard/Images/jpeg/bl_white.jpeg);
+    display: table-cell;
+    vertical-align:middle;
+}

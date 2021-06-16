@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="pragma" content="no-cache" />
+        <title>Login</title>
+        <link href="../login/request_access.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="page" class="container">
+            <header id="header" class="grid_12">
+            </header>
+            <article id="feature" class="grid_12">
+                <form action="../login/authenticate.php" method="post" id="access" >
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="font-weight: bold;">Login</div>
+                        <div id="contact" class="panel-body">                
+                            <div class="d">
+                                <label for="username" class="txt_label">Username:</label>
+                                <input id="username" class="txt_input" type="text" name="username" />
+                            </div>
+                            <div class="d">
+                                <label for="password" class="txt_label">Password:</label>
+                                <input id="password" class="txt_input" type="password" name="password" />
+                            </div> 
+                            <div id="subdiv" class="d">
+                                <input id="submit" type="submit" alt="Log in" name="login" value="Login"/>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </form>
+            </article>
+        </div>
+    </body>
+</html>
