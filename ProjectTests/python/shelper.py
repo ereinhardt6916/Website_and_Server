@@ -10,7 +10,8 @@ class SocketHelper:
 
 	def __init__(self,host,port):
 		self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-		self.s.settimeout(20)
+		self.s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+		self.s.settimeout(600)
 		self.s.bind((host, port))
 		self.s.listen(5)
 
@@ -29,7 +30,7 @@ class SocketHelper:
 
 	def read_data(self):
 		try:
-			self.conn.settimeout(10)
+			self.conn.settimeout(600)
 			buf = self.conn.recv(1024)
 			return buf
 		except:
@@ -37,3 +38,4 @@ class SocketHelper:
 
 	def close_socket(self):
 		self.conn.close()
+		self.s.close()
