@@ -5,12 +5,11 @@ class SocketHelper:
 	s = None
 	conn = None
 	addr = None
-	setup_timeout = 20
-	receive_timeout = 20
+
 
 	def __init__(self,host,port):
 		self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-		self.s.settimeout(20)
+		self.s.settimeout(40)
 		self.s.bind((host, port))
 		self.s.listen(5)
 
@@ -29,7 +28,7 @@ class SocketHelper:
 
 	def read_data(self):
 		try:
-			self.conn.settimeout(10)
+			self.conn.settimeout(40)
 			buf = self.conn.recv(1024)
 			return buf
 		except:
