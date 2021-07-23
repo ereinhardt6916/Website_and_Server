@@ -4,38 +4,68 @@
         <meta http-equiv="pragma" content="no-cache" />
         <title>Forms: Request Access</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="../login/request_access.css" type="text/css" rel="stylesheet" />
+        <link href="../signup/ra.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
-        <div id="page" class="container">
-            <header id="header" class="grid_12">
-            </header>
-            <article id="feature" class="grid_12">
-                <form action="../signup/addcredentials.php" method="post" id="access" >
-                    <div class="panel panel-default">
-                        <div class="panel-heading" style="font-weight: bold;">Sign Up</div>
-                        <div id="contact" class="panel-body">                
-                            <div class="d">
-                                <label for="username" class="txt_label">Username:</label>
-                                <input id="username" class="txt_input" type="text" name="username" />
-                                <a id="usernameFeedback"></a>
-                            </div>
-                            <div class="d">
-                                <label for="password" class="txt_label">Password:</label>
-                                <input id="password" class="txt_input" type="password" name="password" />
-                                <a id="passwordFeedback"></a>
-                            </div> 
-                            <div id="subdiv" class="d">
-                                <input id="submit" type="submit" value="Submit Request" />
-                            </div>
-                            
-                        </div>
-                        
-                    </div>
 
-                </form>
-                <script src="../signup/formEvent.js"></script>
-            </article>
+        <header>
+            <h1>Sign Up to Play!</h1>
+          </header>
+          
+        <div id="form">
+          
+          <div class="fish" id="fish"></div>
+          <div class="fish" id="fish2"></div>
+          
+        <form action="../signup/addcredentials.php" method="post" id="access" >
+
+          <div class="formgroup" id="name-form">
+                <label for="username" class="txt_label">Username:</label>
+                <input id="username" class="txt_input" type="text" name="username" />
+                <a class="inputerror" id="usernameFeedback"></a>
+          </div>
+          
+          <div class="formgroup" id="email-form">
+            <label for="password" class="txt_label">Password:</label>
+            <input id="password" class="txt_input" type="password" name="password" />
+            <a class="inputerror" id="passwordFeedback"></a>
+          </div>
+          
+          <input id="submit" type="submit" value="Submit Request" />
+        </form>
+        <script src="../signup/formEvent1.js"></script>
         </div>
+        
     </body>
 </html>
+
+<!-- <div id="page" class="container">
+    <header id="header" class="grid_12">
+    </header>
+    <article id="feature" class="grid_12">
+        <form action="../signup/addcredentials.php" method="post" id="access" >
+            <div class="panel panel-default">
+                <div class="panel-heading" style="font-weight: bold;">Sign Up</div>
+                <div id="contact" class="panel-body">                
+                    <div class="d">
+                        <label for="username" class="txt_label">Username:</label>
+                        <input id="username" class="txt_input" type="text" name="username" />
+                        <a id="usernameFeedback"></a>
+                    </div>
+                    <div class="d">
+                        <label for="password" class="txt_label">Password:</label>
+                        <input id="password" class="txt_input" type="password" name="password" />
+                        <a id="passwordFeedback"></a>
+                    </div> 
+                    <div id="subdiv" class="d">
+                        <input id="submit" type="submit" value="Submit Request" />
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+        </form>
+        <script src="../signup/formEvent.js"></script>
+    </article>
+</div> -->

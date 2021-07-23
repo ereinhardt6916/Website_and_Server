@@ -6,13 +6,16 @@
     <title>Game Board Test</title>
     
     <link rel="stylesheet" type="text/css" href="../GameBoard/BoardTest.css" />
-    <script src="../GameBoard/BoardTest1.js"></script>
+    <link rel="stylesheet" type="text/css" href="../GameBoard/p.css" />
+
+
+    <script src="../GameBoard/BoardTest2.js"></script>
 
   </head>
 
   <body onload="onLoad()">
     <div class="row">
-      <div class="col-sm-8">
+      <div class="col-sm-7">
         <div class="board" >
           <!-- 1st -->
           <div class="tl_empty" id="1.1" onclick="addPiece('1.1')"></div>
@@ -106,15 +109,18 @@
           <div class="br_empty" id="9.9" onclick="addPiece('9.9')"></div>
         </div>
       </div>
-      <div class="col-sm-4">
-        <h1 >TURN: <span id="turn"></span></h1>
+
+    <div id="data" class="col-sm-5">
+        <p>Turn: <span id="turn"></span></p>
         <p> </p>
         <p> </p>
-        
         <span><button id="Skip" class="but" onclick="addPiece('Skip')">SKIP TURN</button>         
                <button id="!sur" class="but" onclick="addPiece('!sur')">SURRENDER</button></span>
      
+        <p id="countdown">Opponents Turn</p>
         <p>Response from server: <span id="txtHint"></span></p>
+        
+
 
       </div>
     </div>

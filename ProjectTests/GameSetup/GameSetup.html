@@ -1,4 +1,4 @@
- <html>
+ <!-- <html>
     <head>
         <meta http-equiv="pragma" content="no-cache" />
         <meta charset="UTF-8"> 
@@ -23,11 +23,49 @@
 
     </body>
     
+  </html> -->
+
+  <html>
+    <head>
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta charset="UTF-8"> 
+        <title>Game Setup</title>
+        
+        <link rel="stylesheet" type="text/css" href="../GameSetup/GameSetup.css" />
+        <script src="../GameBoard/BoardTest2.js"></script>
+    
+    </head>
+
+    <body>
+        <header>
+            <h1>Select Colour</h1>
+          </header>
+          
+          <div id="form">
+          
+          <div class="fish" id="fish"></div>
+          <div class="fish" id="fish2"></div>
+          
+          <form id="waterform" method="post">
+        
+          
+          <div class="formgroup">
+              <div id="eduard">
+                <input type="radio" id="white" name="colour" value="white" onclick="setMyColour('white')">
+                <label for="white">White</label><br>
+                <input type="radio" id="black" name="colour" value="black" onclick="setMyColour('black')">
+                <label for="black">Black</label><br>
+              </div>
+          </div>
+          
+          <input type="button" value="Submit" onclick="startUp()">
+          <p>Response: <span id="abc"></span></p>   
+          </form>      
+          </div>
 
 
-
-
-
-
-
+    </body>
+    
   </html>
+
+  

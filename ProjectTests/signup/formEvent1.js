@@ -20,7 +20,7 @@ function hasNumber(myString) {
 
 function checkUserName(event) {
 	if (username.value.length < 7) {
-		UsernameFeedback.innerHTML = '<----Username must be at least 7 chars';
+		UsernameFeedback.innerHTML = 'Username must be at least 7 chars';
 		event.preventDefault();					// Do not submit the form (submit == default)
 	} else {
 		UsernameFeedback.innerHTML = '';		// Clear any error messages
@@ -29,13 +29,13 @@ function checkUserName(event) {
 function checkPassword(event) {
 
 	if (password.value.length < 7) {
-		PasswordFeedback.innerHTML = '<----Password must be at least 7 chars';
+		PasswordFeedback.innerHTML = 'Password must be at least 7 chars';
 		event.preventDefault();					// Do not submit the form (submit == default)
 	}else if(hasNumber(password.value) == false){
-		PasswordFeedback.innerHTML = '<----Password must have a number';
+		PasswordFeedback.innerHTML = 'Password must have a number';
 		event.preventDefault();	
 	}else if(hasLowerCase(password.value) == false || hasUpperCase(password.value) == false){
-		PasswordFeedback.innerHTML = '<----Password must have both cases';
+		PasswordFeedback.innerHTML = 'Password must have both cases';
 		event.preventDefault();	
 	}else{
 		PasswordFeedback.innerHTML = '';
