@@ -7,10 +7,15 @@ var numMess;
 var i;
 var command; 
 //&& )
+var fromtimeout;
+function times_up(){
+    addPiece("!sur")    
+}
 
 function addPiece(loc){
     //turn = localStorage.getItem("turn");
-    document.getElementById("txtHint").innerHTML = "loc";//show what the server sent back
+    document.getElementById("txtHint").innerHTML = "I am here";//show what the server sent back
+    clearTimeout(fromtimeout)
 
     if(document.getElementById(loc).className == "empty" || document.getElementById(loc).className == "bl_empty" || document.getElementById(loc).className == "tl_empty" || document.getElementById(loc).className == "tr_empty" || document.getElementById(loc).className == "br_empty" || document.getElementById(loc).className == "r_empty" || document.getElementById(loc).className == "l_empty" || document.getElementById(loc).className == "t_empty" || document.getElementById(loc).className == "b_empty" || document.getElementById(loc).className == "but") {
         if(turn == 0)
@@ -307,6 +312,7 @@ function sendVoid(){
             }
 
         }
+        fromtimeout = setTimeout(times_up(),time);
        
     };
     xmlhttp.open("GET", "comm.php?q=" + "void", true);
@@ -317,7 +323,7 @@ var myColourChoice = "Whit"; //if user doesn't select, defaults to black
 
 //function to run when the user enters in the needed data
 function startUp(){
-    document.getElementById("abc").innerHTML = "Do not refresh page. Waiting for other player....";//show what the server sent back
+    document.getElementById("abc").innerHTML = "I am here Do not refresh page. Waiting for other player....";//show what the server sent back
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {

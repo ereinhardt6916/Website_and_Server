@@ -1,4 +1,3 @@
-//This is for a test
 var turn = 0; 
 var mycolour = "black"; 
 var opcolour = "white";
@@ -8,12 +7,20 @@ var numMess;
 var i;
 var command; 
 //&& )
+var time = 5000;
+var fromtimeout;
+function times_up(){
+    addPiece("!sur")    
+}
 
 function addPiece(loc){
     //turn = localStorage.getItem("turn");
-    window.location.href = "../GameBoard/lost.html"
+    document.getElementById("txtHint").innerHTML = "I am here";//show what the server sent back
+    //clearTimeout(fromtimeout);
+    clearInterval(fromtimeout);
+    document.getElementById("countdown").innerHTML = "Opponents Turn";
 
-    document.getElementById("txtHint").innerHTML = "loc";//show what the server sent back
+
 
     if(document.getElementById(loc).className == "empty" || document.getElementById(loc).className == "bl_empty" || document.getElementById(loc).className == "tl_empty" || document.getElementById(loc).className == "tr_empty" || document.getElementById(loc).className == "br_empty" || document.getElementById(loc).className == "r_empty" || document.getElementById(loc).className == "l_empty" || document.getElementById(loc).className == "t_empty" || document.getElementById(loc).className == "b_empty" || document.getElementById(loc).className == "but") {
         if(turn == 0)
@@ -195,8 +202,20 @@ function sendVoid(){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             response = this.responseText;
+            //fromtimeout = setTimeout(function() {times_up();},time);
+            var timeleft = time/1000;
+            fromtimeout = setInterval(function(){
+            if(timeleft <= 0){
+                clearInterval(fromtimeout);
+                document.getElementById("countdown").innerHTML = "You Lost";
+                times_up();
+            } else {
+                document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
+            }
+            timeleft -= 1;
+            }, 1000);
 
-            document.getElementById("txtHint").innerHTML = response;//show what the server sent back
+            document.getElementById("txtHint").innerHTML = response + " 1timer started";//show what the server sent back
             
             strlen = response.length;
             numMess = strlen/4; //find out how many messages there are
@@ -292,7 +311,12 @@ function sendVoid(){
                     blackScore = command.slice(2,4);
                     //document.getElementById("blackScore").innerHTML = blackScore;
 
-                }                    
+                }
+                else if(command[0] == 'F'){
+                    //connection failed
+                    window.location.href = "../GameBoard/lost.html"
+                    return
+                }                       
             }
             document.getElementById("turn").innerHTML = mycolour;
             if(turn == 1){
@@ -310,6 +334,8 @@ function sendVoid(){
     xmlhttp.open("GET", "comm.php?q=" + "void", true);
     xmlhttp.send();
 }
+
+
 
 var myColourChoice = "Whit"; //if user doesn't select, defaults to black
 

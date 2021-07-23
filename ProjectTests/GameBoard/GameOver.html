@@ -5,17 +5,36 @@
         <meta charset="UTF-8"> 
         <title>Game Over</title>
         
-        <script src="../GameBoard/BoardTest1.js"></script>
+        <script src="../GameBoard/BoardTest2.js"></script>
+        <link href="../GameBoard/endgame.css" type="text/css" rel="stylesheet" />
+
 
     </head>
 
     <body onload="gameOver()" >
-        <div class="col-sm-4">
+
+        <header>
             <h1>Game Over: <span id="winner"></span></h1>
-            <p> </p>
-            <p> </p>
-            <h1>Final Score:</h1>
+          </header>
+          
+          <div id="form">
+          
+          <div class="fish" id="fish"></div>
+          <div class="fish" id="fish2"></div>
+          <form id="waterform">
+
+          
+          <div class="formgroup" id="name-form">
+            <h2>Final Score:</h1>
             <h2>WHITE:<span id="whiteScoreEnd">00</span>  BLACK:<span id="blackScoreEnd">00</span></h2>
+          </div>
+          
+            <button><a href="../GameSetup/GameSetup.php">Play Again!</button> 
+            </form>
+          </div>
+
+
+            
             
         </div>
 

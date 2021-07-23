@@ -1,0 +1,12 @@
+p{
+    font-size: x-large;
+}
+#data{
+    border: 8px solid black;
+    text-align: center;
+    margin-top: 15%;
+    float: left;
+    margin-left: 2%;
+    width: 30%;
+
+}
