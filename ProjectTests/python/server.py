@@ -5,7 +5,7 @@ from shelper import SocketHelper
 from comm_functions import startup
 from comm_functions import player1first
 from comm_functions import player2first
-from watchdog_server import Watchdog_server
+from config import watchdog
 
 port1 = 10231
 port2 = 10236
@@ -18,7 +18,6 @@ while True:
         socket1 = SocketHelper(host1,port1)
         socket2 = SocketHelper(host2,port2)
 
-        watchdog = Watchdog_server()
         watchdog.start()
 
         player1colour = startup(socket1, socket2)
@@ -47,7 +46,7 @@ while True:
                     print("Connection Failed")
                     break
     except Exception as e:
-        print(e)
+        print("[main]"+str(e))
     finally:
         try:
             socket1.close_socket()
