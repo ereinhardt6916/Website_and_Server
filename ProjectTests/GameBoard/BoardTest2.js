@@ -15,7 +15,7 @@ function times_up(){
 
 function addPiece(loc){
     //turn = localStorage.getItem("turn");
-    document.getElementById("txtHint").innerHTML = "I am here";//show what the server sent back
+    //document.getElementById("txtHint").innerHTML = "I am here";//show what the server sent back
     //clearTimeout(fromtimeout);
     clearInterval(fromtimeout);
     document.getElementById("countdown").innerHTML = "Opponents Turn";
@@ -417,11 +417,15 @@ function onLoad(){
     turn = localStorage.getItem("turn");
     document.getElementById("turn").innerHTML = mycolour;
     document.getElementById("txtHint").innerHTML = "You Go First"
+    document.getElementById("countdown").innerHTML = "Your Turn";
+
+    
     if (turn == "1"){
         //if I do not go first
         turn = 3;
         document.getElementById("turn").innerHTML = opcolour;
         document.getElementById("txtHint").innerHTML = "You Go Second"
+        
         sendVoid(); 
     }
 }
@@ -467,6 +471,31 @@ function gameOver(){
     };
     xmlhttp.open("GET", "comm.php?q=" + "WINR", true);
     xmlhttp.send();
+}
+
+var checkConnection;
+
+function startWatchdog(){
+    checkConnection = setInterval(watchDog, 3000);
+}
+
+var testing123 = "1"            
+
+function watchDog(){
+    clearInterval(checkConnection);
+    document.getElementById("isthisworking").innerHTML = 111;
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            response = this.responseText;
+            document.getElementById("isthisworking").innerHTML = response;
+        }
+       
+    };
+    xmlhttp.open("GET", "watch.php?q=" + "void", true);
+    xmlhttp.send();
+
 }
 
 
