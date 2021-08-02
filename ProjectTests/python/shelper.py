@@ -39,3 +39,21 @@ class SocketHelper:
 	def close_socket(self):
 		self.conn.close()
 		self.s.close()
+
+
+	# def read_data(self):
+	# 	try:
+	# 		self.conn.settimeout(10)
+	# 		counter = 0
+	# 		while True:
+	# 			try:
+	# 				# check connection flags
+	# 				buf = self.conn.recv(1024)
+	# 				return buf
+	# 			except:
+	# 				counter += 1
+	# 				if counter > 60:
+	# 					raise Exception
+	# 	except:
+	# 		return("Frev")
+	

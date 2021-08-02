@@ -7,7 +7,7 @@ var numMess;
 var i;
 var command; 
 //&& )
-var time = 5000;
+var time = 120000;
 var fromtimeout;
 function times_up(){
     addPiece("!sur")    
