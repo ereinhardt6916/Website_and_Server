@@ -1,6 +1,7 @@
 import socket
 import logging
 from threading import Thread, Lock
+import os
 
 class Watchdog_server:
 
@@ -31,6 +32,18 @@ class Watchdog_server:
         self.stop_flag = True
         self.P_thread.join()
         self.V_thread.join()
+    
+    def isPConnected(self):
+        self.Pmutex.acquire()
+        result = self.Pfail_flag
+        self.Pmutex.release()
+        return (not result)
+    
+    def isVConnected(self):
+        self.Vmutex.acquire()
+        result = self.Vfail_flag
+        self.Vmutex.release()
+        return (not result)
 
     def __Pwatchdog_start(self):
         self.Psocket = self.SocketHelper(self.Psocket_host, self.Psocket_port)
@@ -78,6 +91,7 @@ class Watchdog_server:
         
         logging.info("[P]Physical board connection lost")
         self.Psocket.close_socket()
+        os.system("pkill python")
     
 
     def __Vwatchdog_start(self):
