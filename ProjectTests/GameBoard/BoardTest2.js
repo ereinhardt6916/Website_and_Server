@@ -473,32 +473,6 @@ function gameOver(){
     xmlhttp.send();
 }
 
-var checkConnection;
-
-function startWatchdog(){
-    checkConnection = setInterval(watchDog, 3000);
-}
-
-var testing123 = "1"            
-
-function watchDog(){
-    clearInterval(checkConnection);
-    document.getElementById("isthisworking").innerHTML = 111;
-
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            response = this.responseText;
-            document.getElementById("isthisworking").innerHTML = response;
-        }
-       
-    };
-    xmlhttp.open("GET", "watch.php?q=" + "void", true);
-    xmlhttp.send();
-
-}
-
-
 
 
 
