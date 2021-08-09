@@ -11,6 +11,7 @@ port1 = 10231
 port2 = 10236
 host2 = "127.0.0.1"
 host1 = "localhost"
+# host1 = "192.168.1.182"
 
 while True:
     try:
@@ -18,7 +19,7 @@ while True:
         socket1 = SocketHelper(host1,port1)
         socket2 = SocketHelper(host2,port2)
 
-        watchdog.start()
+        # watchdog.start()
 
         player1colour = startup(socket1, socket2)
 
