@@ -24,14 +24,14 @@ class Watchdog_server:
     def start(self):
         # start theads
         self.P_thread = Thread(target=self.__Pwatchdog_start, daemon=True)
-        self.V_thread = Thread(target=self.__Vwatchdog_start, daemon=True)
+        # self.V_thread = Thread(target=self.__Vwatchdog_start, daemon=True)
         self.P_thread.start()
-        self.V_thread.start()
+        # self.V_thread.start()
 
     def stop(self):
         self.stop_flag = True
         self.P_thread.join()
-        self.V_thread.join()
+        # self.V_thread.join()
     
     def isPConnected(self):
         self.Pmutex.acquire()
